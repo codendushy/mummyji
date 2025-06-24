@@ -1,1 +1,1 @@
-libsandfile1
+libsndfile1
