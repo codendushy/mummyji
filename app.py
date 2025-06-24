@@ -4,7 +4,7 @@ import librosa
 from tensorflow.keras.models import load_model
 import pickle
 
-MODEL_PATH = 'model3.h5'
+MODEL_PATH = 'model3.keras'
 LABEL_ENCODER_PATH = 'label_encoder.pkl'
 
 @st.cache_resource
