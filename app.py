@@ -4,10 +4,10 @@ import librosa
 from tensorflow.keras.models import load_model
 import pickle
 
-MODEL_PATH = 'model3.keras'
+MODEL_PATH = 'model3.h5'
 LABEL_ENCODER_PATH = 'label_encoder.pkl'
 
-@st.cache_resource
+@st.cache_resource(show_spinner=False, persist="clear")
 def load_artifacts():
     model = load_model(MODEL_PATH, compile=False)
     with open(LABEL_ENCODER_PATH, 'rb') as f:
