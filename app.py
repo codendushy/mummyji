@@ -9,7 +9,7 @@ LABEL_ENCODER_PATH = 'label_encoder.pkl'
 
 @st.cache_resource
 def load_artifacts():
-    model = load_model(MODEL_PATH)
+    model = load_model(MODEL_PATH, compile=False)
     with open(LABEL_ENCODER_PATH, 'rb') as f:
         le = pickle.load(f)
     return model, le
